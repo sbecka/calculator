@@ -4,6 +4,7 @@
   "description": "''\u001b[DMaking a calculator for node and express challenge practice'\u001b[D.\u001b[C\u001b[D'",
   "main": "calculator.js",
   "scripts": {
+    "start": "nodemon calculator.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Sabrina Becker",
