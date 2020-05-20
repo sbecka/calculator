@@ -14,6 +14,16 @@ app.post('/', (req, res) => {
     const { num1, num2 } = req.body;
     const sum = Number(num1) + Number(num2);
     res.send(`Sum: ${sum} Thanks for posting that!`);
-})
+});
+
+app.get('/bmicalculator', (req, res) => {
+    res.sendFile(__dirname + '/bmiCalculator.html');
+});
+
+app.post('/bmicalculator', (req, res) => {
+    const { weight, height } = req.body;
+    const result = Number(weight) / Number(height * height);
+    res.send(`Your BMI is ${result.toFixed(2)}`);
+});
 
 app.listen(3000, () => console.log('Server listening on port 3000'));
